@@ -27,7 +27,7 @@ RUN apt-get install -y --no-install-recommends mariadb-server mariadb-client ngi
 RUN dpkg --get-selections | grep php
 
 RUN rm /var/www/html/index.nginx-debian.html
-RUN wget https://download.yetiforce.com/developer-for-docker.zip -P /var/www/html/ &> /dev/null
+RUN wget https://download.yetiforce.com/developer-for-docker.zip -P /var/www/html/
 RUN unzip /var/www/html/developer-for-docker.zip -d /var/www/html/ > /dev/null
 RUN rm /var/www/html/developer-for-docker.zip
 
